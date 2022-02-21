@@ -4484,6 +4484,18 @@ PrefabInstance:
       propertyPath: curTrackZone
       value: 
       objectReference: {fileID: 835519459}
+    - target: {fileID: 1262104971875227645, guid: acc493ef15a8ef6489c1ec833c895b83, type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1262104971875227646, guid: acc493ef15a8ef6489c1ec833c895b83, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: ac52df78b607f1746ada7c8c17ec8795, type: 2}
+    - target: {fileID: 1262104971875227646, guid: acc493ef15a8ef6489c1ec833c895b83, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1262104971875227647, guid: acc493ef15a8ef6489c1ec833c895b83, type: 3}
       propertyPath: m_Camera
       value: 
