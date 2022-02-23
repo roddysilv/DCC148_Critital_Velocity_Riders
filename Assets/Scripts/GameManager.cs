@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-	public List<CarController> cars = new List<CarController>();
+    public List<CarController> cars = new List<CarController>();
     public Transform[] spawnPoints;
 
     public float positionUpdateRate = 0.05f;
@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour
     public int lapsToWin = 3;
 
     public static GameManager instance;
+
     void Awake ()
     {
         instance = this;
@@ -23,14 +24,14 @@ public class GameManager : MonoBehaviour
 
     void Update ()
     {
-        // Atualizar as posições de corrida de carros
+        // update the car race positions
         if(Time.time - lastPositionUpdateTime > positionUpdateRate)
         {
             lastPositionUpdateTime = Time.time;
             UpdateCarRacePositions();
         }
 
-        // Inicie a contagem regressiva quando todos os carros estiverem prontos
+        // start the countdown when all cars are ready
         if(!gameStarted && cars.Count == playersToBegin)
         {
             gameStarted = true;
@@ -38,7 +39,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    // Chamado quando todos os jogadores estão no jogo e prontos para começar
+    // called when all players in in-game and ready to begin
     void StartCountdown ()
     {
         PlayerUI[] uis = FindObjectsOfType<PlayerUI>();
@@ -48,8 +49,8 @@ public class GameManager : MonoBehaviour
 
         Invoke("BeginGame", 3.0f);
     }
-    
-    // Chamado após a contagem regressiva terminar e os jogadores agora podem correr
+
+    // called after the countdown has ended and players can now race
     void BeginGame ()
     {
         for(int x = 0; x < cars.Count; ++x)
@@ -58,8 +59,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-
-    // Atualiza qual carro vem primeiro, segundo, etc.
+    // updates which car is coming first, second, etc
     void UpdateCarRacePositions ()
     {
         cars.Sort(SortPosition);
@@ -83,8 +83,7 @@ public class GameManager : MonoBehaviour
         return aDist > bDist ? 1 : -1;
     }
 
-
-    // Chamada quando um carro cruza a linha de chegada
+    // called when a car has crossed the finish line
     public void CheckIsWinner (CarController car)
     {
         if(car.curLap == lapsToWin + 1)

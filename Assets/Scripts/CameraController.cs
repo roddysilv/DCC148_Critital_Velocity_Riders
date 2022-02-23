@@ -4,19 +4,17 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
+    public Transform target;
 
-    public Transform target; // alvo
-    public float followSpeed; // velocidade
-    public float rotateSpeed; // rotação
+    public float followSpeed;
+    public float rotateSpeed;
 
-    // Chamada no primeiro frame
-    void Start()
+    void Start ()
     {
-       transform.parent = null;
+        transform.parent = null;
     }
 
-    // A cada frame, a camera se moverá junto ao alvo
-    void Update()
+    void Update ()
     {
         transform.position = Vector3.Lerp(transform.position, target.position, followSpeed * Time.deltaTime);
         transform.rotation = Quaternion.Lerp(transform.rotation, target.rotation, rotateSpeed * Time.deltaTime);

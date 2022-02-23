@@ -10,13 +10,11 @@ public class PlayerUI : MonoBehaviour
     public TextMeshProUGUI countdownText;
     public TextMeshProUGUI gameOverText;
 
-    // Atualiza o texto do carro
     void Update ()
     {
         carPositionText.text = car.racePosition.ToString() + " / " + GameManager.instance.cars.Count.ToString();
     }
 
-    // Exibe a contagem regressiva
     public void StartCountdownDisplay ()
     {
         StartCoroutine(Countdown());
@@ -40,6 +38,6 @@ public class PlayerUI : MonoBehaviour
     {
         gameOverText.gameObject.SetActive(true);
         gameOverText.color = winner == true ? Color.green : Color.red;
-        gameOverText.text = winner == true ? "Você venceu!" : "Você perdeu";
+        gameOverText.text = winner == true ? "You Win" : "You Lost";
     }
 }

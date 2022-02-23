@@ -14,11 +14,11 @@ public class TrackZone : MonoBehaviour
             car.curTrackZone = this;
             car.zonesPassed++;
 
-             if(isGate)
+            if(isGate)
             {
                 car.curLap++;
                 GameManager.instance.CheckIsWinner(car);
             }
         }
-        }
     }
+}
