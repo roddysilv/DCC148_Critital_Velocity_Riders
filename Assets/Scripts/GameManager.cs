@@ -23,7 +23,7 @@ public class GameManager : MonoBehaviour
     void Awake ()
     {
         instance = this;
-        //sunlight.transform.rotation = Quaternion.Euler(10, -30, 0);
+        sunlight.transform.rotation = Quaternion.Euler(10, -30, 0);
     }
 
     void Update ()
