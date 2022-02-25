@@ -19,7 +19,7 @@ public class NavMesh : MonoBehaviour
     {
         agente = this.GetComponent<NavMeshAgent>();
         //int d = Random.Range(0, pontos.Lenght);
-        agente.SetDestination(pontos[i].transform.position);
+        //agente.SetDestination(pontos[0].transform.position);
     }
 
     private void Update()
