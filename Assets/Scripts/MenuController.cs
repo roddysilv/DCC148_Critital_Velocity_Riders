@@ -58,15 +58,15 @@ public class MenuController : MonoBehaviour
         }
         if (menuTime >= 1.0f && menuTime < 1.5f)
         {
-            gameTitle.text = "Ga";
+            gameTitle.text = "GA";
         }
         if (menuTime >= 1.5f && menuTime < 2.5f)
         {
-            gameTitle.text = "Gam";
+            gameTitle.text = "GAM";
         }
         if (menuTime >= 2.5f && menuTime < 3.0f)
         {
-            gameTitle.text = "Game";
+            gameTitle.text = "GAME";
         }
     }
 }
