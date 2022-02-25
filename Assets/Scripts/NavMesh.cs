@@ -5,6 +5,8 @@ using UnityEngine.AI;
 
 public class NavMesh : MonoBehaviour
 {
+    public List<CarController> cars = new List<CarController>();
+
     public GameObject[] pontos;
 
     public float dist;
@@ -22,18 +24,21 @@ public class NavMesh : MonoBehaviour
 
     private void Update()
     {
-        if (agente.remainingDistance < dist)
+        if (cars[0].canControl == true)
         {
-            //int d = Random.Range(0,pontos.Length);
-            i++;
-            if (i < pontos.Length)
+            if (agente.remainingDistance < dist)
             {
-                agente.SetDestination(pontos[i].transform.position);
-            }
-            else
-            {
-                i = 0;
-                agente.SetDestination(pontos[i].transform.position);
+                //int d = Random.Range(0,pontos.Length);
+                i++;
+                if (i < pontos.Length)
+                {
+                    agente.SetDestination(pontos[i].transform.position);
+                }
+                else
+                {
+                    i = 0;
+                    agente.SetDestination(pontos[i].transform.position);
+                }
             }
         }
         //Debug.Log(i);

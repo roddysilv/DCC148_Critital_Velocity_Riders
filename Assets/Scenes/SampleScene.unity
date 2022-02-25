@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.43748924, g: 0.48531228, b: 0.5655869, a: 1}
+  m_IndirectSpecularColor: {r: 0.43748996, g: 0.48531258, b: 0.56558746, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -469,10 +469,10 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 1.24
-  m_Speed: 15
-  m_Acceleration: 5
+  m_Speed: 45
+  m_Acceleration: 50
   avoidancePriority: 50
-  m_AngularSpeed: 1e+30
+  m_AngularSpeed: 100
   m_StoppingDistance: 0
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
@@ -493,7 +493,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b4303050f0afba48835f499be5349b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cars:
+  - {fileID: 8965135596338361492}
   pontos:
+  - {fileID: 757172067}
   - {fileID: 1721714203}
   - {fileID: 1412671195}
   - {fileID: 1923249598}
@@ -512,7 +515,6 @@ MonoBehaviour:
   - {fileID: 1914724070}
   - {fileID: 1825633907}
   - {fileID: 1282034953}
-  - {fileID: 757172067}
   dist: 20
 --- !u!54 &30723214
 Rigidbody:
@@ -538,7 +540,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 30723210}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.04, y: 2.21, z: 1.36}
+  m_LocalPosition: {x: 8.2, y: 2.21, z: 30.1}
   m_LocalScale: {x: 0.35, y: 0.35, z: 0.35}
   m_Children:
   - {fileID: 1031418189}
@@ -4076,10 +4078,10 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 1.24
-  m_Speed: 14
-  m_Acceleration: 5
+  m_Speed: 50
+  m_Acceleration: 50
   avoidancePriority: 50
-  m_AngularSpeed: 1e+30
+  m_AngularSpeed: 100
   m_StoppingDistance: 0
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
@@ -4100,7 +4102,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b4303050f0afba48835f499be5349b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cars:
+  - {fileID: 8965135596338361492}
   pontos:
+  - {fileID: 757172067}
   - {fileID: 1721714203}
   - {fileID: 1412671195}
   - {fileID: 1923249598}
@@ -4119,7 +4124,6 @@ MonoBehaviour:
   - {fileID: 1914724070}
   - {fileID: 1825633907}
   - {fileID: 1282034953}
-  - {fileID: 757172067}
   dist: 20
 --- !u!54 &534698017
 Rigidbody:
@@ -4145,7 +4149,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 534698013}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2, y: 2.21, z: 1.43}
+  m_LocalPosition: {x: 5.4, y: 2.21, z: 30.1}
   m_LocalScale: {x: 0.35, y: 0.35, z: 0.35}
   m_Children:
   - {fileID: 214475417}
@@ -8180,10 +8184,10 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 1.24
-  m_Speed: 14.75
-  m_Acceleration: 5
+  m_Speed: 47.5
+  m_Acceleration: 50
   avoidancePriority: 50
-  m_AngularSpeed: 1e+30
+  m_AngularSpeed: 100
   m_StoppingDistance: 0
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
@@ -8204,7 +8208,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b4303050f0afba48835f499be5349b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cars:
+  - {fileID: 8965135596338361492}
   pontos:
+  - {fileID: 757172067}
   - {fileID: 1721714203}
   - {fileID: 1412671195}
   - {fileID: 1923249598}
@@ -8223,7 +8230,6 @@ MonoBehaviour:
   - {fileID: 1914724070}
   - {fileID: 1825633907}
   - {fileID: 1282034953}
-  - {fileID: 757172067}
   dist: 20
 --- !u!54 &958450265
 Rigidbody:
@@ -8249,7 +8255,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 958450261}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10, y: 2.21, z: 1.23}
+  m_LocalPosition: {x: 11, y: 2.21, z: 30.3}
   m_LocalScale: {x: 0.35, y: 0.35, z: 0.35}
   m_Children:
   - {fileID: 776101588}
@@ -10915,6 +10921,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b4303050f0afba48835f499be5349b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cars: []
   pontos: []
   dist: 0
 --- !u!195 &1286853893
@@ -10987,6 +10994,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b4303050f0afba48835f499be5349b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cars: []
   pontos:
   - {fileID: 1201195645}
   - {fileID: 1566185743}
@@ -17548,6 +17556,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6b705fa2b5f0b024db4d126d4ea570eb, type: 3}
+--- !u!114 &8965135596338361492 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8965135596383168964, guid: 6b705fa2b5f0b024db4d126d4ea570eb, type: 3}
+  m_PrefabInstance: {fileID: 8965135596338361491}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2eddff48ac645094aac6e9f12241bbef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &9093466848628967548
 PrefabInstance:
   m_ObjectHideFlags: 0
