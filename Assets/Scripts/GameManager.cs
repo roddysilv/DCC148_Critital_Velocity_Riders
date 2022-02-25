@@ -17,9 +17,13 @@ public class GameManager : MonoBehaviour
 
     public static GameManager instance;
 
+    public GameObject sunlight;
+    private float lightPosition;
+
     void Awake ()
     {
         instance = this;
+        //sunlight.transform.rotation = Quaternion.Euler(10, -30, 0);
     }
 
     void Update ()
@@ -37,6 +41,14 @@ public class GameManager : MonoBehaviour
             gameStarted = true;
             StartCountdown();
         }
+        if(lightPosition >= 10 && lightPosition <= 180){
+            lightPosition += Time.deltaTime;
+        } else if (lightPosition >= 360){
+            lightPosition = 0;
+        } else {
+            lightPosition += 100*Time.deltaTime;
+        }
+        sunlight.transform.rotation = Quaternion.Euler(lightPosition, -30, 0);
     }
 
     // called when all players in in-game and ready to begin
