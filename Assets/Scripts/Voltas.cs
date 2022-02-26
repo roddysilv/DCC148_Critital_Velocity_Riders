@@ -1,13 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Voltas : MonoBehaviour
 {
-    //public List<CarController> cars = new List<CarController>();
+    public List<CarController> cars = new List<CarController>();
     //public GameObject chegada;
     //public GameObject carro;
-    public int voltas = 0;
+    public int voltasCompletas = 0;
+    private int voltas = 2;
+
+    public TextMeshProUGUI gameOverText;
 
     private bool entrou = false;
 
@@ -17,8 +21,7 @@ public class Voltas : MonoBehaviour
         {
             if (entrou == false)
             {
-                voltas++;
-                //Debug.Log(voltas);
+                voltasCompletas++;
                 entrou = true;
             }
         }
@@ -30,7 +33,24 @@ public class Voltas : MonoBehaviour
         {
             entrou = false;
         }
+    }
 
-        //Debug.Log("AAAAHHHHH");
+    void Update(){
+        if (voltasCompletas >= voltas+1){
+            Debug.Log("Corrida Terminada!");
+            cars[0].canControl = false;
+            GameOver(true);
+        }
+
+        if(voltasCompletas > 0 && voltasCompletas < voltas+1 && cars[0].canControl == false){
+            GameOver(false);
+        }
+    }
+
+    public void GameOver (bool winner)
+    {
+        gameOverText.gameObject.SetActive(true);
+        gameOverText.color = winner == true ? Color.green : Color.red;
+        gameOverText.text = winner == true ? "You Win" : "You Lost";
     }
 }

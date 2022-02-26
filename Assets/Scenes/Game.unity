@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.28622675, g: 0.33516777, b: 0.5214453, a: 1}
+  m_IndirectSpecularColor: {r: 0.28626406, g: 0.33519366, b: 0.5214548, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -398,7 +398,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41fcd6527b2be284fbf09754287555be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cars:
+  - {fileID: 8965135596338361492}
   voltas: 0
+  gameOverText: {fileID: 832498004}
 --- !u!54 &7046828
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -8982,7 +8985,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41fcd6527b2be284fbf09754287555be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cars:
+  - {fileID: 8965135596338361492}
   voltas: 0
+  gameOverText: {fileID: 832498004}
 --- !u!54 &614776820
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -11369,7 +11375,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41fcd6527b2be284fbf09754287555be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cars:
+  - {fileID: 8965135596338361492}
   voltas: 0
+  gameOverText: {fileID: 832498004}
 --- !u!54 &753002316
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -12363,6 +12372,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cars: []
+  laps: []
   spawnPoints:
   - {fileID: 1080997872}
   - {fileID: 321955807}
@@ -12884,6 +12894,17 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 22.06, y: 23.8, z: 6.52}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &832498004 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8195375553471571205, guid: 6b705fa2b5f0b024db4d126d4ea570eb, type: 3}
+  m_PrefabInstance: {fileID: 8965135596338361491}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &837596962
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17243,7 +17264,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41fcd6527b2be284fbf09754287555be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cars:
+  - {fileID: 8965135596338361492}
   voltas: 0
+  gameOverText: {fileID: 832498004}
 --- !u!54 &1195715449
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -27359,6 +27383,27 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: b9529c37144930547bf9c2158693c5cd, type: 3}
   m_PrefabInstance: {fileID: 1974925037}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1977294164 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8965135596383168960, guid: 6b705fa2b5f0b024db4d126d4ea570eb, type: 3}
+  m_PrefabInstance: {fileID: 8965135596338361491}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1977294168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1977294164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41fcd6527b2be284fbf09754287555be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cars:
+  - {fileID: 8965135596338361492}
+  voltas: 2
+  gameOverText: {fileID: 832498004}
 --- !u!1 &1981252415 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 9660bce707c66594db298e0df6797985, type: 3}
@@ -28719,7 +28764,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41fcd6527b2be284fbf09754287555be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cars:
+  - {fileID: 8965135596338361492}
   voltas: 0
+  gameOverText: {fileID: 832498004}
 --- !u!54 &2082462835
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -30082,7 +30130,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8965135596383168964, guid: 6b705fa2b5f0b024db4d126d4ea570eb, type: 3}
   m_PrefabInstance: {fileID: 8965135596338361491}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1977294164}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2eddff48ac645094aac6e9f12241bbef, type: 3}

@@ -5,6 +5,7 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public List<CarController> cars = new List<CarController>();
+    public List<Voltas> laps = new List<Voltas>();
     public Transform[] spawnPoints;
 
     public float positionUpdateRate = 0.05f;
