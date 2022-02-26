@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.28626406, g: 0.33519366, b: 0.5214548, a: 1}
+  m_IndirectSpecularColor: {r: 0.28622675, g: 0.33516777, b: 0.5214453, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -30033,9 +30033,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3461495127614111098, guid: 6b705fa2b5f0b024db4d126d4ea570eb, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 526
+      objectReference: {fileID: 0}
+    - target: {fileID: 5969658460439451583, guid: 6b705fa2b5f0b024db4d126d4ea570eb, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8133715253244723318, guid: 6b705fa2b5f0b024db4d126d4ea570eb, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8195375553471571205, guid: 6b705fa2b5f0b024db4d126d4ea570eb, type: 3}
+      propertyPath: m_text
+      value: "Voc\xEA Ganhou!"
       objectReference: {fileID: 0}
     - target: {fileID: 8427022943771451187, guid: 6b705fa2b5f0b024db4d126d4ea570eb, type: 3}
       propertyPath: m_ReceiveGI
