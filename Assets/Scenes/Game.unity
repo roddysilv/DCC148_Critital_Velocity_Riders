@@ -400,7 +400,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cars:
   - {fileID: 8965135596338361492}
-  voltas: 0
+  voltasCompletas: 0
+  isPlayer: 0
   gameOverText: {fileID: 832498004}
 --- !u!54 &7046828
 Rigidbody:
@@ -8987,7 +8988,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cars:
   - {fileID: 8965135596338361492}
-  voltas: 0
+  voltasCompletas: 0
+  isPlayer: 0
   gameOverText: {fileID: 832498004}
 --- !u!54 &614776820
 Rigidbody:
@@ -11377,7 +11379,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cars:
   - {fileID: 8965135596338361492}
-  voltas: 0
+  voltasCompletas: 0
+  isPlayer: 0
   gameOverText: {fileID: 832498004}
 --- !u!54 &753002316
 Rigidbody:
@@ -17266,7 +17269,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cars:
   - {fileID: 8965135596338361492}
-  voltas: 0
+  voltasCompletas: 0
+  isPlayer: 0
   gameOverText: {fileID: 832498004}
 --- !u!54 &1195715449
 Rigidbody:
@@ -27402,7 +27406,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cars:
   - {fileID: 8965135596338361492}
-  voltas: 2
+  voltasCompletas: 0
+  isPlayer: 1
   gameOverText: {fileID: 832498004}
 --- !u!1 &1981252415 stripped
 GameObject:
@@ -28766,7 +28771,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cars:
   - {fileID: 8965135596338361492}
-  voltas: 0
+  voltasCompletas: 0
+  isPlayer: 0
   gameOverText: {fileID: 832498004}
 --- !u!54 &2082462835
 Rigidbody:
