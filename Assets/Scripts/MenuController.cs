@@ -38,8 +38,8 @@ public class MenuController : MonoBehaviour
     public void startGame()
     {
         //start the game
-        //SceneManager.LoadScene("Game");
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("Game");
+        //SceneManager.LoadScene("SampleScene");
     }
     public void quitGame()
     {
