@@ -117,18 +117,10 @@ public class MenuController : MonoBehaviour
         {
             gameTitle.text = "CRITICAL VELOCITY";
         }
-        /*if (menuTime >= 2.25f && menuTime < 2.375f)
-        {
-            gameTitle.text = "CRITICAL VELOCITY ";
-        }
-        if (menuTime >= 2.375f && menuTime < 2.5f)
-        {
-            gameTitle.text = "CRITICAL VELOCITY 1";
-        }*/
         if (menuTime >= 2.5f && menuTime < 3.0f)
         {
             //gameTitle.text = "CRITIAL VELOCITY";
-            gameTitle2.text = "THE RIDERS";
+            gameTitle2.text = "RIDERS";
         }
     }
 }
