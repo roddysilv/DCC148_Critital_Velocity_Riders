@@ -12,7 +12,7 @@ public class Voltas : MonoBehaviour
     //public GameObject carro;
     public int voltasCompletas = 0;
 
-    private int voltas = 2;
+    private int voltas = 3;
 
     public bool isPlayer;
 

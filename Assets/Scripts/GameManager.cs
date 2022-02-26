@@ -19,7 +19,7 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
 
     public GameObject sunlight;
-    private float lightPosition = 30.0f;
+    private float lightPosition = 50.0f;
     
     void Awake ()
     {
@@ -42,7 +42,7 @@ public class GameManager : MonoBehaviour
             gameStarted = true;
             StartCountdown();
         }
-        if(lightPosition >= 30 && lightPosition <= 160){
+        if(lightPosition >= 50 && lightPosition <= 160){
             lightPosition += Time.deltaTime;
         } else if (lightPosition >= 360){
             lightPosition = 0;
