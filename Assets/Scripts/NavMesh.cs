@@ -42,5 +42,5 @@ public class NavMesh : MonoBehaviour
             }
         }
         //Debug.Log(i);
-    }    
+    }
 }
