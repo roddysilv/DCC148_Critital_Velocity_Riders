@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Voltas : MonoBehaviour
 {
@@ -18,6 +19,8 @@ public class Voltas : MonoBehaviour
     public TextMeshProUGUI gameOverText;
 
     private bool entrou = false;
+
+    private float menuTimer = 5.0f;
 
     public void OnTriggerEnter(Collider other)
     {
@@ -69,5 +72,10 @@ public class Voltas : MonoBehaviour
         gameOverText.gameObject.SetActive(true);
         gameOverText.color = winner == true ? Color.green : Color.red;
         gameOverText.text = winner == true ? "Você Ganhou!" : "Você Perdeu!";
+        menuTimer -= Time.deltaTime;
+        if (menuTimer <= 0.0f)
+        {
+            SceneManager.LoadScene("Menu");
+        }
     }
 }
