@@ -28,11 +28,14 @@ public class CarController : MonoBehaviour
 
     public Rigidbody rig;
 
+    public AudioSource engineSound;
+
     void Start ()
     {
         startModelOffset = carModel.transform.localPosition;
         GameManager.instance.cars.Add(this);
         transform.position = GameManager.instance.spawnPoints[GameManager.instance.cars.Count - 1].position;
+        engineSound.volume = 0;
     }
 
     void Update ()
@@ -86,10 +89,15 @@ public class CarController : MonoBehaviour
     // called when we press down the accelerate input
     public void OnAccelerateInput (InputAction.CallbackContext context)
     {
-        if(context.phase == InputActionPhase.Performed)
+        if(context.phase == InputActionPhase.Performed){
             accelerateInput = true;
-        else
+            if(canControl)
+            engineSound.volume = 60;
+        }
+        else {
             accelerateInput = false;
+            engineSound.volume = 0;
+        }
     }
 
     // called when we modify the turn input
