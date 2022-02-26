@@ -18,12 +18,12 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
 
     public GameObject sunlight;
-    private float lightPosition;
-
+    private float lightPosition = 30.0f;
+    
     void Awake ()
     {
         instance = this;
-        sunlight.transform.rotation = Quaternion.Euler(30, -30, 0);
+        //sunlight.transform.rotation = Quaternion.Euler(30, -30, 0);
     }
 
     void Update ()
@@ -41,7 +41,7 @@ public class GameManager : MonoBehaviour
             gameStarted = true;
             StartCountdown();
         }
-        if(lightPosition >= 10 && lightPosition <= 180){
+        if(lightPosition >= 30 && lightPosition <= 160){
             lightPosition += Time.deltaTime;
         } else if (lightPosition >= 360){
             lightPosition = 0;
