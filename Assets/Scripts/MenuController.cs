@@ -11,15 +11,15 @@ public class MenuController : MonoBehaviour
     public GameObject introPanel; // introPanel object
     public GameObject mainMenu; // mainMenu object
     public TMPro.TextMeshProUGUI gameTitle;
+    public TMPro.TextMeshProUGUI gameTitle2;
     private float menuTime = 0.0f;
     // Start is called before the first frame update
     void Start()
     {
-        //force disable the end game menu buttons
-        //restartButton.gameObject.SetActive(false);
-        //quitButton.gameObject.SetActive(false);
+        //force disable the main menu and clears the text
         mainMenu.SetActive(false);
         gameTitle.text = ""; // clear the text
+        gameTitle2.text = ""; // clear the text
         introPanel.SetActive(true); // enable the intro panel
     }
 
@@ -28,12 +28,10 @@ public class MenuController : MonoBehaviour
     {
         menuTime += Time.deltaTime;
         gameTitleTypeAnimation();
-        if (menuTime >= 5.0f)
+        if (menuTime >= 4.5f)
         {
             introPanel.SetActive(false);
             mainMenu.SetActive(true);
-            //startButton.SetActive(true);
-            //quitButton.SetActive(true);
         }
     }
 
@@ -51,22 +49,86 @@ public class MenuController : MonoBehaviour
 
     private void gameTitleTypeAnimation()
     {
-        //menuTime += Time.deltaTime;
-        if (menuTime >= 0.5f && menuTime < 1.0f)
+        if (menuTime >= 0.125f && menuTime < 0.25f)
         {
-            gameTitle.text = "G";
+            gameTitle.text = "C";
         }
-        if (menuTime >= 1.0f && menuTime < 1.5f)
+        if (menuTime >= 0.25f && menuTime < 0.375f)
         {
-            gameTitle.text = "GA";
+            gameTitle.text = "CR";
         }
-        if (menuTime >= 1.5f && menuTime < 2.5f)
+        if (menuTime >= 0.375f && menuTime < 0.5f)
         {
-            gameTitle.text = "GAM";
+            gameTitle.text = "CRI";
         }
+        if (menuTime >= 0.5f && menuTime < 0.625f)
+        {
+            gameTitle.text = "CRIT";
+        }
+        if (menuTime >= 0.625f && menuTime < 0.750f)
+        {
+            gameTitle.text = "CRITI";
+        }
+        if (menuTime >= 0.750f && menuTime < 0.875f)
+        {
+            gameTitle.text = "CRITIC";
+        }
+        if (menuTime >= 0.875f && menuTime < 1.0f)
+        {
+            gameTitle.text = "CRITICA";
+        }
+        if (menuTime >= 1.0f && menuTime < 1.125f)
+        {
+            gameTitle.text = "CRITICAL";
+        }
+        if (menuTime >= 1.125f && menuTime < 1.25f)
+        {
+            gameTitle.text = "CRITICAL ";
+        }
+        if (menuTime >= 1.25f && menuTime < 1.375f)
+        {
+            gameTitle.text = "CRITICAL V";
+        }
+        if (menuTime >= 1.375f && menuTime < 1.5f)
+        {
+            gameTitle.text = "CRITICAL VE";
+        }
+        if (menuTime >= 1.5f && menuTime < 1.625f)
+        {
+            gameTitle.text = "CRITICAL VEL";
+        }
+        if (menuTime >= 1.625f && menuTime < 1.750f)
+        {
+            gameTitle.text = "CRITICAL VELO";
+        }
+        if (menuTime >= 1.750f && menuTime < 1.875f)
+        {
+            gameTitle.text = "CRITICAL VELOC";
+        }
+        if (menuTime >= 1.875f && menuTime < 2.0f)
+        {
+            gameTitle.text = "CRITICAL VELOCI";
+        }
+        if (menuTime >= 2.0f && menuTime < 2.125f)
+        {
+            gameTitle.text = "CRITICAL VELOCIT";
+        }
+        if (menuTime >= 2.125f && menuTime < 2.5f)
+        {
+            gameTitle.text = "CRITICAL VELOCITY";
+        }
+        /*if (menuTime >= 2.25f && menuTime < 2.375f)
+        {
+            gameTitle.text = "CRITICAL VELOCITY ";
+        }
+        if (menuTime >= 2.375f && menuTime < 2.5f)
+        {
+            gameTitle.text = "CRITICAL VELOCITY 1";
+        }*/
         if (menuTime >= 2.5f && menuTime < 3.0f)
         {
-            gameTitle.text = "GAME";
+            //gameTitle.text = "CRITIAL VELOCITY";
+            gameTitle2.text = "THE RIDERS";
         }
     }
 }
