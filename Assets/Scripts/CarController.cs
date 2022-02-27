@@ -92,7 +92,7 @@ public class CarController : MonoBehaviour
         if(context.phase == InputActionPhase.Performed){
             accelerateInput = true;
             if(canControl)
-            engineSound.volume = 60;
+            engineSound.volume = 0.4f;
         }
         else {
             accelerateInput = false;
